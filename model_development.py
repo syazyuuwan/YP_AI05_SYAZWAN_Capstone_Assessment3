@@ -180,7 +180,7 @@ fig.suptitle('Distribution of Numerical Columns After Impute with Mean', fontsiz
 axes = axes.flatten()
 
 for i, column in enumerate(numerical_columns):
-    sns.histplot(df_fill_mean[column], kde=True, ax=axes[i])
+    sns.histplot(df_fill[column], kde=True, ax=axes[i])
     axes[i].set_title(f"Distribution of {column}")
     axes[i].set_xlabel(column)
     axes[i].set_ylabel("Frequency")
@@ -272,3 +272,4 @@ Oversampling result:
 # %%
 keras.utils.plot_model(model)
 # %%
+model.save(os.path.join('models', 'Capstone3_Syazwan.h5'))
